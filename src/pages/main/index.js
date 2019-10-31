@@ -1,5 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 
+import { Link } from 'react-router-dom';
+
 import React, { Component } from 'react';
 
 import api from '../../services/api';
@@ -53,7 +55,7 @@ export default class Main extends Component {
             <strong>{product.title}</strong>
             <p>{product.description}</p>
 
-            <a href="">More...</a>
+            <Link to={`/products/${product._id}`}>More...</Link>
           </article>
         ))}
         <div className="actions">
